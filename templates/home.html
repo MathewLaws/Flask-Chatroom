@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block page %}Home{% endblock %}
+
+{% block content %}
+<div>
+    <header id="homeHeader">Enter Name</header>
+    <form method="post">
+        <input type="text" id="username" name="username"></input>
+        <button className="btn" type="submit">Submit</button>
+    </form>
+<div/>
+<p style="color: red">{{error}}</p>
+{% endblock %}
