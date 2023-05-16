@@ -27,9 +27,10 @@ def home():
 @app.route("/chatroom", methods=["GET", "POST"])
 def chatroom():
     try:
-        if session["username"]:
+        if session.get("username"):
             return render_template("chatroom.html", username=session.get("username"), messages=messages)
-    except:
+    except NameError:
+        print(NameError)
         return redirect(url_for("home"))
 
 @socketio.on("message")

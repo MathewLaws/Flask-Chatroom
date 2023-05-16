@@ -1,14 +1,14 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 
-{% block page %}Home{% endblock %}
-
 {% block content %}
-<div>
-    <header id="homeHeader">Enter Name</header>
-    <form method="post">
-        <input type="text" id="username" name="username"></input>
-        <button className="btn" type="submit">Submit</button>
-    </form>
-<div/>
-<p style="color: red">{{error}}</p>
+<div class="h-100 d-flex align-items-center justify-content-center flex-column">
+        <strong class="mb-3">Please enter your username</strong>
+        <form method="post">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username" class="form-control"></input>
+                <button className="btn" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    <p style="color: red">{{error}}</p>
+</div>
 {% endblock %}
